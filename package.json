@@ -1,0 +1,33 @@
+{
+  "name": "vuetify-project",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "dynamsoft-camera-enhancer": "^4.0.1",
+    "dynamsoft-capture-vision-router": "^2.0.32",
+    "dynamsoft-core": "^3.0.32",
+    "dynamsoft-label-recognizer": "^3.0.30",
+    "dynamsoft-license": "^3.0.40",
+    "dynamsoft-utility": "^1.0.21",
+    "@mdi/font": "6.2.95",
+    "roboto-fontface": "*",
+    "vue": "^3.4.21",
+    "vuetify": "^3.5.8"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.24.0",
+    "@types/node": "^20.11.25",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.71.1",
+    "typescript": "^5.4.2",
+    "unplugin-fonts": "^1.1.1",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.1.5",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vue-tsc": "^2.0.6"
+  }
+}
