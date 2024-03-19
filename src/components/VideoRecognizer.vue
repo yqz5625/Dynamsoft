@@ -15,7 +15,7 @@ import { VSlider } from 'vuetify/components/VSlider'
 
 const uiContainer: Ref<HTMLElement | null> = ref(null);
 const resultsContainer: Ref<HTMLElement | null> = ref(null);
-const zoom = ref(0)
+const zoom = ref(1)
 const pInit: Ref<Promise<{
   cameraView: CameraView;
   cameraEnhancer: CameraEnhancer;
