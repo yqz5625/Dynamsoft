@@ -65,6 +65,7 @@ const init = async (): Promise<{
     const comp = cameraEnhancer.getCapabilities()
     console.log(comp)
     console.log(cameraEnhancer.getFocusSettings())
+    console.log(cameraEnhancer.getZoomSettings())
 
 
     uiContainer.value!.append(cameraView.getUIElement()); // Get default UI and append it to DOM.
