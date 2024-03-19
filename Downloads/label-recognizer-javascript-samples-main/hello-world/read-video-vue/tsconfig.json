@@ -3,16 +3,13 @@
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   "allowJs": true,
   "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
-    "target": "es2017",
-    "module": "commonjs",
     "baseUrl": ".",
     "ignoreDeprecations": "5.0",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
+  "moduleResolution": "node",
 
   "references": [
     {
