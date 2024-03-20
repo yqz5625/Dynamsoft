@@ -15,7 +15,7 @@ import { VSlider } from 'vuetify/components/VSlider'
 
 const uiContainer: Ref<HTMLElement | null> = ref(null);
 const resultsContainer: Ref<HTMLElement | null> = ref(null);
-const zoom = ref(6)
+const zoom = ref(1)
 const pInit: Ref<Promise<{
   cameraView: CameraView;
   cameraEnhancer: CameraEnhancer;
@@ -64,9 +64,15 @@ const init = async (): Promise<{
     await cameraEnhancer.open()
     const comp = cameraEnhancer.getCapabilities()
     console.log(comp)
-    await cameraEnhancer.setZoom({
-      factor: zoom.value
-    });
+
+    const updateZoom = async () => {
+      await cameraEnhancer.setZoom({
+        factor: zoom.value
+      });
+    }
+    // await cameraEnhancer.setZoom({
+    //   factor: zoom.value
+    // });
     console.log("Zoom Setting", cameraEnhancer.getZoomSettings())
 
 
@@ -153,7 +159,8 @@ onUnmounted(async () => {
 </script>
 
 <template>
-  <v-slider v-model="zoom" :max="10" :min="1" color="orange" label="zoom"></v-slider>
+  <v-slider v-model="zoom" :max="10" :min="1" color="orange" label="zoom" @update:modelValue="updateZoom()"
+></v-slider>
   <div>
     <div ref="uiContainer" class="div-ui-container"></div>
     Results:
