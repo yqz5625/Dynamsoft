@@ -62,18 +62,13 @@ const init = async (): Promise<{
     //   factor: zoom.value,
     // });
     await cameraEnhancer.open()
-    const comp = cameraEnhancer.getCapabilities()
-    console.log(comp)
+    // const comp = cameraEnhancer.getCapabilities()
+    // console.log(comp)
 
-    const updateZoom = async () => {
-      await cameraEnhancer.setZoom({
-        factor: zoom.value
-      });
-    }
     // await cameraEnhancer.setZoom({
     //   factor: zoom.value
     // });
-    console.log("Zoom Setting", cameraEnhancer.getZoomSettings())
+    // console.log("Zoom Setting", cameraEnhancer.getZoomSettings())
 
 
 
@@ -143,9 +138,21 @@ const init = async (): Promise<{
   }
 };
 
-onMounted(async () => {
-  pInit.value = init();
-});
+// onMounted(async () => {
+pInit.value = init();
+// const { cameraEnhancer } = await init();
+// });
+
+const updateZoom = async () => {
+  if (pInit.value) {
+    const { cameraView, cameraEnhancer, router } = await pInit.value;
+    console.log('zoom', zoom.value)
+    await cameraEnhancer.setZoom({
+      factor: zoom.value
+    });
+  }
+}
+
 
 onUnmounted(async () => {
   if (pInit.value) {
@@ -159,8 +166,7 @@ onUnmounted(async () => {
 </script>
 
 <template>
-  <v-slider v-model="zoom" :max="10" :min="1" color="orange" label="zoom" @update:modelValue="updateZoom()"
-></v-slider>
+  <v-slider v-model="zoom" :max="10" :min="1" color="orange" label="zoom" @update:modelValue="updateZoom()"></v-slider>
   <div>
     <div ref="uiContainer" class="div-ui-container"></div>
     Results:
