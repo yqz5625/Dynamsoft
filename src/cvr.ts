@@ -25,7 +25,7 @@ CoreModule.engineResourcePaths = {
   license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.40/dist/",
   cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.32/dist/",
   dlr: "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@3.0.30/dist/",
-  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/",
+  dce: "https://cdn.jsdelivr.net/npm/iv-dynamsoft-camera-enhancer@4.0.2-iv-202403151422/dist/dce.jst/",
   dcm: "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer-data@1.0.0/dist/"
 };
 
