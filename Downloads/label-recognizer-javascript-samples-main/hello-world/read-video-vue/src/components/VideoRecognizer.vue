@@ -50,10 +50,10 @@ const init = async (): Promise<{
     const cameraView = await CameraView.createInstance();
     const cameraEnhancer = await CameraEnhancer.createInstance(cameraView);
     let scanRegion = {
-        x: 30,
+        x: 20,
   y: 20,
-  width: 40,
-  height: 30,
+  width: 60,
+  height: 20,
       isMeasuredInPercentage: true,
     };
     await cameraEnhancer.setScanRegion(scanRegion);
